@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #count {
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    
+    <button id="increment">Increment</button>
+    <p id="count">0</p>
+    <Button onclick="window.location.href = './index.html'">Task 1</Button>
+    <Button onclick="window.location.href = './task2.html'">Task 2</Button>
+    <Button onclick="window.location.href = './task3.html'">Task 3</Button>
+    <Button onclick="window.location.href = './task4.html'">Task 4</Button>
+    <Button onclick="window.location.href = './task5.html'">Task 5</Button>
+    <Button onclick="window.location.href = './task6.html'">Task 6</Button>
+    <Button onclick="window.location.href = './task7.html'">Task 7</Button>
+    <script>
+      const count = document.querySelector("#count");
+      const increment = document.querySelector("#increment");
+
+      increment.addEventListener("click", () => {
+        let currentCount = parseInt(count.textContent);
+        currentCount++;
+        count.textContent = currentCount;
+        count.style.fontSize = `${16 + currentCount}px`;
+      });
+    </script>
+  </body>
+</html>

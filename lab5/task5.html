@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <Button onclick="window.location.href = './index.html'">Task 1</Button>
+    <Button onclick="window.location.href = './task2.html'">Task 2</Button>
+    <Button onclick="window.location.href = './task3.html'">Task 3</Button>
+    <Button onclick="window.location.href = './task4.html'">Task 4</Button>
+    <Button onclick="window.location.href = './task5.html'">Task 5</Button>
+    <Button onclick="window.location.href = './task6.html'">Task 6</Button>
+    <Button onclick="window.location.href = './task7.html'">Task 7</Button>
+    <div class="container">
+      <input type="text" id="input1">
+      <input type="text" id="input2">
+      <br>
+      <button id="add">+</button>
+      <button id="subtract">-</button>
+      <button id="multiply">*</button>
+      <button id="divide">/</button>
+      <br>
+      <p id="result"></p>
+    </div>
+    <script>
+      const input1 = document.querySelector("#input1");
+      const input2 = document.querySelector("#input2");
+      const add = document.querySelector("#add");
+      const subtract = document.querySelector("#subtract");
+      const multiply = document.querySelector("#multiply");
+      const divide = document.querySelector("#divide");
+      const result = document.querySelector("#result");
+
+      add.addEventListener("click", () => {
+        const num1 = Number.parseInt(input1.value);
+        const num2 = Number.parseInt(input2.value);
+        result.innerText = `Result: ${num1 + num2}`;
+      });
+
+      subtract.addEventListener("click", () => {
+        const num1 = Number.parseInt(input1.value);
+        const num2 = Number.parseInt(input2.value);
+        result.innerText = `Result: ${num1 - num2}`;
+      });
+
+      multiply.addEventListener("click", () => {
+        const num1 = Number.parseInt(input1.value);
+        const num2 = Number.parseInt(input2.value);
+        result.innerText = `Result: ${num1 * num2}`;
+      });
+
+      divide.addEventListener("click", () => {
+        const num1 = Number.parseInt(input1.value);
+        const num2 = Number.parseInt(input2.value);
+        result.innerText = `Result: ${num1 / num2}`;
+      });
+    </script>
+  </body>
+</html>
